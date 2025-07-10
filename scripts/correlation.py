@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load your data
-data = pd.read_csv('14502431.csv')
+data = pd.read_csv('scripts/weather.csv')
 
 # Exclude non-numeric columns
 numeric_data = data.select_dtypes(include=[np.number])

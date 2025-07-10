@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data
-data = pd.read_csv('14502431.csv')
+data = pd.read_csv('scripts/weather.csv')
 
 # Convert necessary columns to numeric, assuming they are not already
 data['Temp9am'] = pd.to_numeric(data['Temp9am'], errors='coerce')

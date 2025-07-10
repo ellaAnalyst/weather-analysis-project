@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 import seaborn as sns
 
 # 데이터 로딩
-data = pd.read_csv('14502431.csv')  # 적절한 파일 경로로 수정
+data = pd.read_csv('scripts/weather.csv') 
 
 # 클러스터링에 사용할 변수 선택
 temp_data = data[['MinTemp', 'MaxTemp', 'Temp9am', 'Temp3pm']]
@@ -61,7 +61,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import seaborn as sns
 
-data = pd.read_csv('14502431.csv')
+data = pd.read_csv('scripts/weather.csv')
 
 temp_data = data[['MinTemp', 'MaxTemp', 'Temp9am', 'Temp3pm']]
 temp_data.dropna(inplace=True)

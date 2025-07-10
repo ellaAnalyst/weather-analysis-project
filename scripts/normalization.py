@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-data = pd.read_csv('14502431.csv')  # Modify the file path as needed
+data = pd.read_csv('scripts/weather.csv')  # Modify the file path as needed
 
 # Apply Min-Max Normalization
 data['MaxTemp_MinMax'] = (data['MaxTemp'] - data['MaxTemp'].min()) / (data['MaxTemp'].max() - data['MaxTemp'].min())
