@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the data
-data = pd.read_csv('14502431.csv')
+data = pd.read_csv('scripts/weather.csv')
 
 # Task B1: Equi-width and Equi-depth Binning of 'Rainfall'
 data['Rainfall_EquiWidth'] = pd.cut(data['Rainfall'], bins=5, labels=False)
