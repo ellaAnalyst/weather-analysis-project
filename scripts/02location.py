@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 # CSV 파일 로드
-df = pd.read_csv('14502431.csv')
+df = pd.read_csv('scripts/weather.csv')
 
 # 날짜 데이터를 datetime 타입으로 변환
 df['Date'] = pd.to_datetime(df['Date'])
