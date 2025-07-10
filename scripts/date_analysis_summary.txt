@@ -1,0 +1,18 @@
+Total Days Recorded: 1769
+Date Range: 3391 days
+Oldest Date: 2008-03-10
+Newest Date: 2017-06-22
+
+Data Collection Frequency per Year:
+Date
+2008     44
+2009    274
+2010    281
+2011    280
+2012    292
+2013    292
+2014    329
+2015    352
+2016    333
+2017    141
+Name: count, dtype: int64
