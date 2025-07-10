@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset from the specified file path
-data = pd.read_csv('14502431.csv')
+data = pd.read_csv('scripts/weather.csv')
 
 # Convert the 'Date' column to datetime format for easier analysis
 data['Date'] = pd.to_datetime(data['Date'])
