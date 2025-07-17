@@ -1,112 +1,133 @@
-# 🌦️ Weather Data Analytics: EDA, Preprocessing & Clustering
+# 🌦️ Weather Data Analytics & Rainfall Prediction
 
-> A full-cycle portfolio project for practical data analysis using weather data  
-> Covers EDA → Preprocessing → Visualization → Clustering with professional depth
+> A practical, end-to-end weather data project covering **exploratory analysis**, **feature engineering**, **clustering**, and **rainfall prediction using machine learning models**.
 
 ---
 
-## 📌 Project Overview
+## 📊 Project Overview
 
-This project explores Australian weather data to perform end-to-end data analysis, including **attribute identification, preprocessing, exploratory visualization, correlation analysis, and clustering**.  
-The focus is on building a well-structured, interpretable analysis flow that prepares data for modeling and decision-making in real-world applications.
+This project explores Australian weather data to build an end-to-end analysis and modeling workflow.  
+Starting from data understanding and pattern discovery, it culminates in a trained machine learning model capable of predicting whether it will rain tomorrow.
 
-- Exploratory and statistical insights from raw climate data  
-- Multiple data preprocessing methods applied for structure and clarity  
-- K-Means clustering to group weather patterns by temperature, wind, and humidity
+The goal is to simulate a professional data analysis pipeline from raw data to actionable predictions.
 
 ---
 
 ## 🎯 Objectives
 
-- Understand the statistical structure and attributes of weather data  
-- Apply preprocessing techniques (Binning, Normalization, etc.) to prepare data  
-- Analyze inter-variable correlations with visual interpretation  
-- Use **KMeans clustering** to classify similar weather conditions  
-- Generate actionable insights applicable to real-world domains
+- Explore statistical structures of weather data through EDA
+- Apply preprocessing techniques:
+  - Binning, normalization, discretization, binarization
+- Discover weather condition patterns using KMeans clustering
+- Predict rainfall (`RainTomorrow`) using supervised classifiers
+- Compare model performances and select the best one
+- Generate practical insights for weather-based decisions
 
 ---
 
-## 🔍 Dataset Description
+## 📂 Repository Structure
+
+| Folder / File                 | Description                                          |
+|-------------------------------|------------------------------------------------------|
+| `notebooks/`                  | Analysis notebooks (EDA, clustering, modeling)       |
+| ├── 01_eda_clustering.ipynb   | Exploratory analysis, preprocessing, clustering      |
+| └── 02_rain_prediction_modeling.ipynb | Machine learning classification pipeline      |
+| `scripts/`                    | Python modules for preprocessing and modeling        |
+| `models/`                     | Final trained prediction model (.pkl)                |
+| `figures/`                    | Output visualizations (EDA, clustering, modeling)    |
+| `reports/`                    | PDF reports summarizing each pipeline step           |
+| `requirements.txt`            | Python dependencies                                  |
+| `README.md`                   | Project overview and documentation                   |
+
+---
+
+## 🧩 Dataset Description
 
 - **Source:** Australian Bureau of Meteorology (BOM)  
-- **Period:** March 10, 2008 – June 22, 2017  
-- **Entries:** 1,769 recorded days  
-- **Variables include:**  
-  - Temperatures (MinTemp, MaxTemp, Temp9am, Temp3pm)  
-  - Wind (WindGustSpeed, WindSpeed9am, WindSpeed3pm)  
-  - Humidity, Pressure, Rainfall, Sunshine, CloudCover, etc.  
-- **Types:** Mixed (Nominal, Ordinal, Interval, Ratio)
+- **Time Period:** March 2008 – June 2017  
+- **Total Entries:** 1,769 days  
+- **Features:**  
+  - Temperatures (MinTemp, MaxTemp, Temp9am, Temp3pm)
+  - Wind speeds (Gust, 9am, 3pm)
+  - Humidity, Rainfall, Sunshine, CloudCover, Pressure
+  - Binary conditions: Bio presence, Profile picture presence
+  - Derived features: Follow Ratio, Post Ratio
+- **Target:** `RainTomorrow` (Yes/No)
+
+---
+
+## 🔍 Analysis Flow
+
+### 🧪 01. EDA & Weather Pattern Clustering
+
+- Data cleaning and missing value analysis
+- Feature engineering:
+  - Binning, normalization, discretization, binarization
+- Correlation analysis between weather attributes
+- KMeans clustering:
+  - Grouping weather conditions by temperature, wind, and humidity
+- Visualization of patterns and clusters
+
+📄 Detailed in:  
+- Notebook: `01_eda_clustering.ipynb`  
+- Report: `reports/01_eda_clustering.pdf`
+
+---
+
+### ☔️ 02. Rain Prediction Modeling
+
+- Predicting next-day rainfall using ML classifiers
+- Workflow:
+  - Data preprocessing and feature selection
+  - Train/validation/test splitting
+  - Models compared:
+    - Decision Tree
+    - K-Nearest Neighbors
+    - Random Forest
+    - Support Vector Machine (SVM)
+    - Neural Network (**final model**)
+  - Model evaluation using accuracy and F1-score
+  - Final model selected based on stability and performance
+
+📄 Detailed in:  
+- Notebook: `02_rain_prediction_modeling.ipynb`  
+- Report: `reports/02_rain_prediction_modeling.pdf`
+
+---
+
+## 📈 Final Results
+
+| Model                 | Accuracy | F1-Score |
+|-----------------------|----------|----------|
+| Decision Tree         | 85%      | 85%      |
+| Random Forest         | 86%      | 86%      |
+| SVM                   | 86%      | 86%      |
+| 🌟 Neural Network     | **87%**  | **88%**  |
+
+✔️ **Final Model:** Neural Network  
+✔️ **Trained Model Saved:**  
+`models/final_rain_prediction_model.pkl`
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Language & Environment:** Python 3.x, Jupyter Notebook  
-- **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn  
-- **Structure:** `.ipynb` for main flow, `.py` for modular functions
+- **Languages:** Python 3.x, Jupyter Notebook  
+- **Libraries:** pandas, numpy, scikit-learn, seaborn, matplotlib  
+- **Tools:** Modular Python scripts, visual reporting
 
 ---
 
-## 🗂️ Project Structure
+## 📦 Deliverables
 
-weather-data-analytics/
-├── notebooks/ # Main analysis steps (EDA, Preprocessing, Clustering)
-├── scripts/ # Python modules for reusable logic
-├── images/ # Output plots and visualizations
-├── report/ # Final report (PDF)
-├── README.md
-├── requirements.txt
-└── .gitignore
-
-
+- 📊 Weather condition clustering model (KMeans)
+- ☔️ Rainfall prediction model (Neural Network)
+- 📈 Visual reports (EDA, clustering, modeling)
+- 📄 PDF reports summarizing analysis steps
+- 📁 Ready-to-use trained model (.pkl)
 
 ---
 
-## 📊 Analysis Summary
-
-### 🧪 1. Exploratory Data Analysis (EDA)
-- Visualize and describe distribution across key variables  
-- Identify data gaps, outliers, and value ranges  
-- Pearson Correlation Matrix:  
-  - Strong positive correlations between temperatures  
-  - Negative correlations between temperature and humidity
-
-### 🧹 2. Preprocessing
-- **Binning:** Applied both equi-width and equi-depth binning to Rainfall  
-- **Normalization:** MaxTemp normalized using Min-Max and Z-score  
-- **Discretization:** WindSpeed3pm categorized into ‘Slow’ to ‘Very Fast’  
-- **Binarization:** WindDir9am converted into binary (N-direction = 1, else = 0)
-
-### 📈 3. Clustering (KMeans)
-- **Temperature clustering:** Clear grouping between morning lows and afternoon highs  
-- **Wind clustering:** Separated high gust days from moderate conditions  
-- **Humidity-Temperature clustering:** Identified dry/hot vs. humid/cool clusters  
-- **Application:** Useful for weather modeling, energy planning, and agriculture
-
----
-
-## 💡 Key Findings
-
-- Daily temperature patterns are highly predictable → usable for energy demand forecasting  
-- Rainfall mostly absent → indicates dry climate or seasonal precipitation  
-- Wind speeds higher in the afternoon → relevant for wind energy strategy  
-- Clustering reveals consistent weather types (e.g. hot-dry, humid-cool days)
-
----
-
-## 🚀 How to Run
-
-```bash
-# Clone the repository
-git clone https://github.com/gosarii/weather-data-analytics.git
-cd weather-data-analytics
-
-# (Optional) Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install required libraries
-pip install -r requirements.txt
-
-# Launch Jupyter Notebook
-jupyter notebook
+<p align="center">
+  📊 Data analysis ➔ 🛠️ Feature engineering ➔ 🤖 ML modeling ➔ 📈 Insight
+</p>
