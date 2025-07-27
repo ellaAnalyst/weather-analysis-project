@@ -5,6 +5,12 @@
 
 ---
 
+<p align="center">
+  <img src="images/report/1.png" width="720" alt="Cover Slide">
+</p>
+
+---
+
 ## 📊 Project Overview
 
 This project analyzes Australian weather data to explore statistical patterns, discover latent weather clusters, and predict rainfall using various machine learning models.  
@@ -14,11 +20,11 @@ It simulates a professional data science workflow from raw data analysis to trai
 
 ## 🎯 Objectives
 
-- Perform structured EDA and pattern analysis
-- Engineer features for improved model learning
-- Apply **KMeans clustering** for weather condition discovery
-- Develop classifiers to predict **RainTomorrow (Yes/No)**
-- Compare models and select the best-performing model
+- Perform structured EDA and pattern analysis  
+- Engineer features for improved model learning  
+- Apply **KMeans clustering** for weather condition discovery  
+- Develop classifiers to predict **RainTomorrow (Yes/No)**  
+- Compare models and select the best-performing model  
 - Generate insights applicable to **agriculture, energy, and weather forecasting**
 
 ---
@@ -35,16 +41,18 @@ It simulates a professional data science workflow from raw data analysis to trai
 | `requirements.txt`            | Python dependencies                                  |
 | `README.md`                   | This project overview                                |
 
+📄 **[Click here to view the final PDF report](reports/Weather_Analytics_Final_Report_Ella_Lee.pdf)**  
+(A presentation-style summary of the entire project)
+
 ---
 
 ## 🧩 Dataset Description
 
-- **Source:** Australian Bureau of Meteorology (BOM)
-- **Period:** March 2008 – June 2017
-- **Total Records:** 1,769 daily observations
-- **Target Variable:** `RainTomorrow` (Yes/No)
-- **Features Include:**  
-  Temperatures, wind speeds, humidity, rainfall, pressure, cloud cover, derived ratios.
+- **Source:** Australian Bureau of Meteorology (BOM)  
+- **Period:** March 2008 – June 2017  
+- **Total Records:** 1,769 daily observations  
+- **Target Variable:** `RainTomorrow` (Yes/No)  
+- **Features Include:** Temperatures, wind speeds, humidity, rainfall, pressure, cloud cover, derived ratios
 
 ---
 
@@ -52,54 +60,37 @@ It simulates a professional data science workflow from raw data analysis to trai
 
 ### 🧪 01. Exploratory Analysis & Weather Pattern Clustering
 
-- Handling missing values via median/mode imputation
-- Feature engineering:
-  - Binning, normalization, discretization, binarization
-- Correlation analysis to identify predictive variables
-- **KMeans clustering** to discover weather patterns
+- Missing value handling via median/mode imputation  
+- Feature engineering (binning, scaling, binarization, discretization)  
+- Correlation analysis to identify predictive features  
+- **KMeans clustering** to discover meaningful weather groupings
 
 📄 Notebook: `01_eda_clustering.ipynb`  
 📄 Report: `reports/01_eda_clustering.pdf`
+
+<p align="center">
+  <img src="images/report/2.png" width="720" alt="EDA Summary Slide">
+</p>
 
 ---
 
 ### ☔️ 02. Rainfall Prediction Modeling
 
-- Binary classification pipeline:
-  - Decision Tree
-  - K-Nearest Neighbors (KNN)
-  - Random Forest
-  - Support Vector Machine (SVM)
-  - **Neural Network (final model)**
-- Evaluation metrics:
-  - Accuracy, Precision, Recall, F1-Score
-- Hyperparameter tuning via Grid Search & Cross-Validation
-- **Neural Network** selected as final model based on:
-  - Highest **accuracy (87%)**
-  - Best **F1-Score (88%)**
-  - Balanced performance across metrics
-  - Strong generalization and overfitting resistance
+- ML models tested:
+  - Decision Tree, KNN, Random Forest, SVM, **Neural Network**
+- Metrics: Accuracy, Precision, Recall, F1-score  
+- Hyperparameter tuning via GridSearch + Cross-Validation  
+- **Neural Network selected** as final model:
+  - Accuracy: **87%**
+  - F1-Score: **88%**
+  - Strong balance across classes
 
 📄 Notebook: `02_rain_prediction_modeling.ipynb`  
 📄 Report: `reports/02_rain_prediction_modeling.pdf`
 
----
-
-## 📊 Key Results & Visualizations
-
-### 📈 Model Performance Comparison
-
-<img src="images/modeling/Picture18.png" width="600">
-
-> Performance of all models across Accuracy, Precision, Recall, and F1-Score.
-
----
-
-### 🎯 Final Model Confusion Matrix (Neural Network)
-
-<img src="images/modeling/Picture17.png" width="500">
-
-> Confusion matrix of the Neural Network, showing strong prediction performance.
+<p align="center">
+  <img src="images/report/3.png" width="720" alt="Model Comparison Slide">
+</p>
 
 ---
 
@@ -119,32 +110,31 @@ It simulates a professional data science workflow from raw data analysis to trai
 
 ## 💡 Insights & Applications
 
-- 📊 Afternoon **humidity** and **wind gusts** are key rainfall predictors.
-- 🌦️ Clustering identified distinct weather patterns beyond nominal categories.
-- 💧 Practical use cases:
-   - Agricultural water planning
-   - Flood risk management
-   - Renewable energy optimization
-   - General weather forecasting
+- 📊 Afternoon **humidity** and **wind gusts** are key rainfall predictors  
+- 🌦️ Clustering revealed new weather groups beyond standard labels  
+- 💧 Practical applications:
+  - Agricultural water planning
+  - Flood risk alerts
+  - Renewable energy balancing
+  - Public weather forecasting
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Languages:** Python 3.x, Jupyter Notebook
-- **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn
-- **Outputs:** PDF reports, trained ML model, visualizations
+- **Languages:** Python 3.x, Jupyter Notebook  
+- **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn  
+- **Outputs:** PDF reports, trained ML model, visuals
 
 ---
 
 ## 📦 Project Deliverables
 
-- 📊 EDA-driven insights with statistical and correlation analysis
-- 🌀 Weather condition clustering using KMeans
-- ☔️ Rain prediction classifier (Neural Network)
-- 📈 Visualized model comparisons and confusion matrix
-- 📄 PDF reports summarizing analysis steps
-- 📁 Trained prediction model for future deployment
+- 📊 EDA-driven insights & weather pattern clustering  
+- ☔️ Binary rainfall prediction model (Neural Network)  
+- 📈 Visualized evaluation & model comparison  
+- 📄 Final presentation PDF  
+- 📁 Trained ML model ready for deployment
 
 ---
 
@@ -156,4 +146,12 @@ It simulates a professional data science workflow from raw data analysis to trai
 
 ## ✅ Why This Project Matters
 
-This project showcases a **professional-grade, end-to-end machine learning workflow**, transitioning from data exploration to actionable prediction. It highlights my ability to handle raw data, design features, build interpretable models, and deliver practical, deployable solutions — essential competencies for data science roles.
+This project showcases a **full-cycle, professional-grade data science workflow**, from raw weather data to interpretable prediction.  
+It demonstrates key competencies in:
+- Data wrangling & feature engineering  
+- Model development & tuning  
+- Real-world insight generation  
+Perfect for roles in **data science**, **climate tech**, or **forecasting analytics**.
+
+---
+
